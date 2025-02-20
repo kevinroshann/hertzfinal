@@ -36,7 +36,7 @@ import Hero from '@/app/components/Hero'
 // import styles from '../styles/Home.module.scss';
 import { TextGenerateEffect } from './components/ui/textgenerate';
 import { useState, useEffect } from "react";
-import { AnimatePresence, color} from 'framer-motion';
+import { AnimatePresence} from 'framer-motion';
 import Preloader from '@/app/components/Preloader/index'
 
 
