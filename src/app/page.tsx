@@ -36,7 +36,7 @@ import Hero from '@/app/components/Hero'
 // import styles from '../styles/Home.module.scss';
 import { TextGenerateEffect } from './components/ui/textgenerate';
 import { useState, useEffect } from "react";
-import { AnimatePresence} from 'framer-motion';
+import { AnimatePresence, color} from 'framer-motion';
 import Preloader from '@/app/components/Preloader/index'
 
 
@@ -86,14 +86,15 @@ const IndexPage: NextPage = () => {
       </div>
       </section>
      */}
-     <section className="section  flex justify-center items-center text-white text-4xl "style={{ 
+     {/* <section className="section  flex justify-center items-center text-white text-4xl "style={{ 
     backgroundImage: "url('/lab.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     width: "100vw",
     height: "100vh"
-  }}>
+  }}> */}
+  <section style={{background:"black"}}>
      <Hero/></section>
       <section className="section  flex justify-center items-center text-white text-4xl">
         
@@ -130,8 +131,8 @@ const IndexPage: NextPage = () => {
 > */}
 </section>
 {/* <section className="p-8 md:p-16 text-black flex flex-col items-center justify-center text-center" style={{ background: "linear-gradient(to bottom, #340253 75%, #370257 100%)" }}> */}
- 
-<Rotate/>
+ <section>
+<Rotate/></section>
 {/* </section> */}
 <section className="p-8 md:p-16 text-black flex flex-col items-center justify-center text-center" style={{ background: "linear-gradient(to bottom, #340253 75%, #370257 100%)" }}>
  
@@ -222,12 +223,21 @@ const IndexPage: NextPage = () => {
     </div>
       </section>
 
-
+      <section style={{
+    backgroundColor: "#280d40",}}>
+<Home/>
+{/* <section
+  className="section flex justify-center p-6 md:p-12 items-center text-white text-4xl text-center"
+  style={{
+    background: "linear-gradient(to bottom, #340253 75%, #360155 100%)",
+  }}
+> */}
+</section>
 
       <section
       className="p-6 md:p-12 text-white"
       style={{
-        background: "linear-gradient(to bottom, #1f0236 75%, black 100%)",
+        backgroundColor: "#340452",
       }}
     >
       <SlidingImage/></section>

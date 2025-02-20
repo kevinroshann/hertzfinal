@@ -2,12 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-// const fonts = [
-//     "font-['Bold']",
-//     "font-['Regular']",
-   
-  
-//   ];
+
 const texts = ["HERTZ", "ഹെർട്സ്", "ஹெர்ட்ஸ்", "हेटर्स", "హెర్ట్జ్"];
 const fonts = ["font-['Bold']", "sans-serif", "monospace", "cursive", "fantasy"];
 
@@ -19,13 +14,26 @@ const Hero = () => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % texts.length);
       setFont(fonts[Math.floor(Math.random() * fonts.length)]);
-    }, 7000); // Change every 7 seconds
+    }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-black text-white">
+    <div className="relative flex items-center justify-center h-screen bg-black text-white overflow-hidden">
+      {/* Video Background */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Text Animation */}
       <AnimatePresence mode="wait">
         <motion.span
           key={texts[index]}

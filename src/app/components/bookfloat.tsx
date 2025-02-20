@@ -4,14 +4,10 @@ import { motion } from "framer-motion";
 
 export default function FloatingImage() {
   return (
+    
     <div
   style={{ 
-    backgroundImage: "url('/forest.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    width: "100vw",
-    height: "100vh"
+    background: "linear-gradient(to bottom, black 75%, #280d40 100%)",
   }}
   className="w-screen h-screen"
 >
