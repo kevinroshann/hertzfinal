@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+@font-face {
+  font-family: 'Bold';
+  src: url('/fonts/kenyan-coffee.bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url('/fonts/kenyan-coffee.regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
